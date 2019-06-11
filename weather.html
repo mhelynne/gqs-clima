@@ -5,9 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
    	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="weather.js"></script>
 	
 	
@@ -23,11 +24,27 @@
 	
 	<div class="col">
 	
-		<div class="row mt-5">
+		<div class="row mt-5 mb-5">	
+			<div class="col-2">
+			</div>
+			<div class="col-8 mx-auto w-50">
+				
+				<div class="input-group input-group-lg">
+				  <input id="search-city" type="text" class="form-control" placeholder="Pesquise o clima de uma cidade" >
+				  <div class="input-group-append">
+						<button id="search-btn" type="submit"><i class="fa fa-search"></i></button>
+				  </div>
+				</div>
+			</div>
+			<div class="col-2">
+			</div>							
+		</div>
+		
+		<div class="row">
 			<div class="col text-center"> <h1 id="city"> </h1></div>
 		</div>
 	
-		<div class="row">
+		<div class="row" id="city-exists">
 			<div class="col mx-auto w-50">
 				<img class="rounded float-right" id="weather-img" />
 			</div>
@@ -39,6 +56,10 @@
 				<p id="sunrise"></p>				
 				<p id="sunset"></p>				
 			</div>
+		</div>
+		
+		<div class="text-center" id="city-not-exists" style="display:none">
+			<i class="fa fa-5x fa-meh-o"></i>
 		</div>
 		
 	</div>
